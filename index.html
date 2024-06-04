@@ -55,22 +55,26 @@
         }
     </style>
 </head>
-<body>
     <div class="container">
         <h1>Earthly experience at your door</h1>
         <p>This website integrates your entire lifestyle with AI</p>
         <button class="btn" id="getStartedBtn">Get Started</button>
-        <div id="tabs" style="display: none;">
+        <div id="tabs">
             <div class="tab">1. Monthly Expenses Tracking</div>
             <div class="tab">2. Daily Chores Reminder</div>
             <div class="tab">3. To-Do List</div>
             <div class="tab">4. Shopping</div>
         </div>
     </div>
-<script>
+    <script>
         document.getElementById("getStartedBtn").addEventListener("click", function() {
-            document.getElementById("tabs").style.display = "block";
+            var tabs = document.getElementById("tabs");
+            if (tabs.style.display === "none") {
+                tabs.style.display = "block";
+            } else {
+                tabs.style.display = "none";
+            }
         });
-</script>
+    </script>
 </body>
 </html>
